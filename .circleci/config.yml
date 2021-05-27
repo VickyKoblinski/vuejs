@@ -20,4 +20,4 @@ jobs:
       - run: node --version
       - setup_remote_docker
       - run: docker-compose build
-      - run: ls /var/lib/docker/overlay2
+      - run: ls -la /var/lib/docker
