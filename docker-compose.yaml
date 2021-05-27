@@ -2,6 +2,7 @@ version: "3.7"
 services:
   web:
     build: vuejs
+    image: x540019/project_web
     ports:
       - 8080:8080
     volumes:
