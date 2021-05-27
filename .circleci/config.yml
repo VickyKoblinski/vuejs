@@ -19,5 +19,6 @@ jobs:
       - checkout
       - run: node --version
       - setup_remote_docker
+      - run: echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
       - run: docker-compose build
-      - run: docker-compose images
+      - run: docker-compose push
