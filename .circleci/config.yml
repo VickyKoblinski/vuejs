@@ -29,3 +29,8 @@ jobs:
       # - run: docker-compose push
       # - store_artifacts:
       #     path: /bin/final_build
+  test:
+    docker:
+      - image: cimg/node:16.2.0
+    steps:
+      - run: ls .
