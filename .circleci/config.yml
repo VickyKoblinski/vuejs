@@ -21,11 +21,12 @@ jobs:
       - setup_remote_docker
       - run: echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
       - run: docker-compose build
-      - run: ls -la .
-      - run: ls -la /var 
-      - run: ls -la /var/lib 
-      - run: ls -la /var/lib/docker 
-      - run: ls -la /var/lib/docker/overlay2 
+      - run: tree
+      # - run: ls -la .
+      # - run: ls -la /var 
+      # - run: ls -la /var/lib 
+      # - run: ls -la /var/lib/docker 
+      # - run: ls -la /var/lib/docker/overlay2 
       # - run: docker-compose push
       # - store_artifacts:
       #     path: /bin/final_build
